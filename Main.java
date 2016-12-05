@@ -6,7 +6,7 @@ public class Main {
 
 	public static void main(String[] args) throws FileNotFoundException {
 
-		Scanner input = new Scanner(new File("src/entrada"));
+		Scanner input = new Scanner(new File("entrada.txt"));
 
 		int size = input.nextInt();
 		int[][] matrizPredecessor = new int[size][size];
@@ -18,7 +18,7 @@ public class Main {
 					int valor = input.nextInt();
 					matrizDistancia[i][j] = valor;
 					if (valor != 999 && i != j) {
-						matrizPredecessor[i][j] = i + 1;
+						matrizPredecessor[i][j] = i;
 					}
 					System.out.print(String.valueOf(matrizDistancia[i][j]) + " ");
 				}
